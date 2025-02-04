@@ -7,10 +7,12 @@ import { AbstractOperation } from 'src/entities/operation/Operation';
 const mockOperation: AbstractOperation = {
   id: '1',
   name: 'Test Operation',
-  description: 'This is a test operation',
+  desc: 'This is a test operation',
   amount: 100,
   category: { id: '1', name: 'Test Category' },
   date: '2023-10-01',
+  createdAt: '2023-10-01',
+  updatedAt: '2023-10-01',
 };
 
 describe('OperationCard', () => {
@@ -20,7 +22,7 @@ describe('OperationCard', () => {
     expect(screen.getByText(mockOperation.category.name)).toBeInTheDocument();
     expect(screen.getByText(mockOperation.amount.toString())).toBeInTheDocument();
     expect(screen.getByText(mockOperation.name)).toBeInTheDocument();
-    expect(screen.getByText(mockOperation.description)).toBeInTheDocument();
+    expect(screen.getByText(mockOperation.desc)).toBeInTheDocument();
     expect(screen.getByText(mockOperation.date)).toBeInTheDocument();
   });
 

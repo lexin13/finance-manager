@@ -11,7 +11,7 @@ export const OperationCard: React.FC<OperationCardProps> = ({
   amount,
   category,
   name,
-  description,
+  desc,
   date,
   onEditClick,
 }) => {
@@ -23,7 +23,7 @@ export const OperationCard: React.FC<OperationCardProps> = ({
       </div>
       <div className={style['card-body']}>
         <h2 className={style['name']}>{name}</h2>
-        <p className={style['description']}>{description}</p>
+        <p className={style['description']}>{desc}</p>
       </div>
       <div className={style['card-footer']}>
         <span className={style['date']}>{date}</span>
